@@ -1,0 +1,93 @@
+body {
+    background-color: #faf0d5;
+    font-family: Helvetica Neue, CMU Serif;
+  }
+
+  .contenedor-formularios {
+    margin: 0 auto;
+    width: 600px; 
+    display: flex; 
+    flex-direction: column; 
+  }
+  
+
+  .contenedor-tabs {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex; 
+    justify-content: space-between; 
+  }
+  
+  .tab {
+    padding: 10px 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .tab.active {
+    background-color: #e4bf52;
+  }
+  
+  .tab a {
+    text-decoration: none;
+    color: #333;
+  }
+  
+
+  .contenido-tab {
+    flex: 1; 
+    padding: 20px;
+    border-radius: 5px;
+    background-color: #e4bf52; 
+  }
+  
+ 
+  #iniciar-sesion, #registrarse {
+    margin-bottom: 20px;
+  }
+  
+  h1 {
+    text-align: center;
+    font-family: Comfortaa, sans-serif;
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .contenedor-input {
+    margin-bottom: 15px;
+  }
+  
+  .contenedor-input label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  .contenedor-input input[type="text"],
+  .contenedor-input input[type="email"],
+  .contenedor-input input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+  }
+  
+  .button {
+    background-color: #338b31;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .forgot {
+    text-align: right;
+    margin-bottom: 10px;
+  }
+  
+  .forgot a {
+    color: #333;
+  }
