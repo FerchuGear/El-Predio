@@ -1,50 +1,3 @@
-// login.php
-
-session_start();
-require 'db.php'; // Importa la conexión a la base de datos
-
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $email = $_POST['email'];
-    $password = $_POST['password'];
-
-    // Consulta para verificar el usuario y obtener el rol
-    $sql = "SELECT u.id, u.password, r.rol
-            FROM usuarios u
-            INNER JOIN roles r ON u.rol_id = r.id
-            WHERE u.email = :email";
-    $stmt = $pdo->prepare($sql);
-    $stmt->bindParam(':email', $email, PDO::PARAM_STR);
-    $stmt->execute();
-
-    $user = $stmt->fetch();
-
-    // Verifica la contraseña usando password_verify
-    if ($user && password_verify($password, $user['password'])) {
-        // Login exitoso
-        $_SESSION['user_id'] = $user['id'];
-        $_SESSION['rol'] = $user['rol'];
-
-        // Redirigir según el rol
-        switch ($user['rol']) {
-            case 'Administrador':
-                header("Location: admin_dashboard.php");
-                break;
-            case 'Empleado':
-                header("Location: empleado_dashboard.php");
-                break;
-            case 'Cliente':
-                header("Location: cliente_dashboard.php");
-                break;
-            default:
-                echo "Rol no reconocido.";
-        }
-    } else {
-        echo "Correo o contraseña incorrectos.";
-    }
-}
-?>
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -116,4 +69,5 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 </head>
 <body>
+
 
