@@ -1,0 +1,166 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f7f1e0;
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    max-width: 1000px;
+    margin: 20px auto;
+    padding: 20px;
+}
+
+h1 {
+    color: #d4a373;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    background-color: #f0dfb6;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.left-section,
+.right-section {
+    width: 45%;
+}
+
+.left-section h2 {
+    color: #e63946;
+    font-size: 1.5em;
+}
+
+.left-section h3 {
+    color: #b08968;
+    font-size: 1.2em;
+}
+
+button {
+    background-color: #6a994e;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #5a874e;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"] {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+hr {
+    border: 1px solid #ccc;
+    margin: 20px 0;
+}
+
+label {
+    display: block;
+    margin: 10px 0;
+}
+
+/*ESTILO DEL HEADER*/
+header {
+    background-color: rgb(70, 69, 64); /* Color de fondo */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    flex-wrap: wrap; /* Permite que los elementos se envuelvan */
+}
+
+/* Estilo para el logo */
+.logo img {
+    height: 50px; /* Ajusta la altura del logo */
+    width: auto;
+}
+
+/* Estilo para el contenedor de enlaces */
+.section-links {
+    display: flex;
+    gap: 20px; /* Espacio entre enlaces */
+    flex-wrap: wrap; /* Permite que los enlaces se envuelvan */
+}
+
+/* Estilo para los enlaces */
+.section-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    margin: 5px; /* Espacio alrededor de los enlaces */
+}
+
+/* Estilo para el hover de los enlaces */
+.section-links a:hover {
+    color: #ccc; /* Cambia el color al pasar el cursor */
+}
+
+/* Estilos responsivos */
+@media (max-width: 800px) {
+    header {
+        flex-direction: column; /* Cambia la dirección a columna en pantallas pequeñas */
+        align-items: center; /* Alinea el logo y los enlaces al centro */
+    }
+
+    .section-links {
+        justify-content: center; /* Centra los enlaces en pantallas pequeñas */
+        width: 100%; /* Hace que los enlaces ocupen el 100% del ancho */
+        padding: 10px 0; /* Espaciado vertical */
+    }
+
+    .section-links a {
+        font-size: 16px; /* Reduce el tamaño de fuente en pantallas pequeñas */
+        margin: 5px 0; /* Ajusta el margen */
+    }
+}
+
+@media (max-width: 500px) {
+    .section-links a {
+        font-size: 14px; /* Reduce aún más el tamaño de fuente en pantallas muy pequeñas */
+    }
+}
+
+/* Estilo adicional para hacer que el header sea más amigable en móviles */
+.hamburger {
+    display: none; /* Oculta el botón de menú por defecto */
+    flex-direction: column;
+    cursor: pointer;
+    margin-left: auto;
+}
+
+.hamburger div {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 4px;
+    transition: 0.3s;
+}
+
+@media (max-width: 800px) {
+    .hamburger {
+        display: flex; /* Muestra el botón de menú en pantallas pequeñas */
+    }
+
+    .section-links {
+        display: none; /* Oculta los enlaces por defecto */
+        flex-direction: column; /* Apila los enlaces verticalmente */
+        width: 100%;
+    }
+
+    .section-links.active {
+        display: flex; /* Muestra los enlaces cuando están activos */
+    }
+}
+

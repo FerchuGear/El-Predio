@@ -1,0 +1,267 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f7f6e5;
+    color: #333;
+  }
+  
+  .container {
+    width: 80%;
+    margin: auto;
+    padding: 20px;
+  }
+  
+  .selector-cancha,
+  .horario,
+  .horas,
+  .popup-reserva,
+  .ubicacion,
+  .horarios,
+  .servicios {
+    margin: 20px 0;
+  }
+  
+  .selector-cancha label {
+    font-size: 1.2em;
+  }
+  
+  .selector-cancha select {
+    padding: 5px;
+    font-size: 1em;
+  }
+  
+  .title {
+    font-size: 2em;
+    text-align: center;
+    margin-top: 10px;
+  }
+  
+  .horario {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .horario .fecha {
+    margin: 0 10px;
+    font-size: 1.2em;
+  }
+  
+  .arrow {
+    background: none;
+    border: none;
+    font-size: 1.5em;
+    cursor: pointer;
+  }
+  
+  .horas {
+    display: flex;
+    justify-content: space-between;
+    background-color: #e0e0e0;
+    padding: 10px;
+    border-radius: 5px;
+  }
+  
+  .hora {
+    width: 50px;
+    text-align: center;
+    padding: 10px;
+    background-color: #cfd8dc;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .hora.reservado {
+    background-color: #8bc34a;
+  }
+  
+  .popup-reserva {
+    background-color: #fff;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    max-width: 200px;
+    text-align: center;
+    margin: 20px auto;
+  }
+  
+  .confirmar {
+    background-color: #4caf50;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .ubicacion,
+  .horarios,
+  .servicios {
+    background-color: #ffecb3;
+    padding: 15px;
+    border-radius: 5px;
+  }
+  
+  .ubicacion h2,
+  .horarios h2,
+  .servicios h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+  }
+  
+  .servicios {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+  }
+  
+  .servicio {
+    text-align: center;
+    padding: 10px;
+  }
+  
+  .eliminar {
+    background-color: #388e3c;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: block;
+    margin: 20px auto;
+  }  
+
+
+/*ESTILO DEL HEADER*/
+header {
+    background-color: rgb(70, 69, 64); /* Color de fondo */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    flex-wrap: wrap; /* Permite que los elementos se envuelvan */
+}
+
+/* Estilo para el logo */
+.logo img {
+    height: 50px; /* Ajusta la altura del logo */
+    width: auto;
+}
+
+/* Estilo para el contenedor de enlaces */
+.section-links {
+    display: flex;
+    gap: 20px; /* Espacio entre enlaces */
+    flex-wrap: wrap; /* Permite que los enlaces se envuelvan */
+}
+
+/* Estilo para los enlaces */
+.section-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    margin: 5px; /* Espacio alrededor de los enlaces */
+}
+
+/* Estilo para el hover de los enlaces */
+.section-links a:hover {
+    color: #ccc; /* Cambia el color al pasar el cursor */
+}
+
+/* Estilos responsivos */
+@media (max-width: 800px) {
+    header {
+        flex-direction: column; /* Cambia la dirección a columna en pantallas pequeñas */
+        align-items: center; /* Alinea el logo y los enlaces al centro */
+    }
+
+    .section-links {
+        justify-content: center; /* Centra los enlaces en pantallas pequeñas */
+        width: 100%; /* Hace que los enlaces ocupen el 100% del ancho */
+        padding: 10px 0; /* Espaciado vertical */
+    }
+
+    .section-links a {
+        font-size: 16px; /* Reduce el tamaño de fuente en pantallas pequeñas */
+        margin: 5px 0; /* Ajusta el margen */
+    }
+}
+
+@media (max-width: 500px) {
+    .section-links a {
+        font-size: 14px; /* Reduce aún más el tamaño de fuente en pantallas muy pequeñas */
+    }
+}
+
+/* Estilo adicional para hacer que el header sea más amigable en móviles */
+.hamburger {
+    display: none; /* Oculta el botón de menú por defecto */
+    flex-direction: column;
+    cursor: pointer;
+    margin-left: auto;
+}
+
+.hamburger div {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 4px;
+    transition: 0.3s;
+}
+
+@media (max-width: 800px) {
+    .hamburger {
+        display: flex; /* Muestra el botón de menú en pantallas pequeñas */
+    }
+
+    .section-links {
+        display: none; /* Oculta los enlaces por defecto */
+        flex-direction: column; /* Apila los enlaces verticalmente */
+        width: 100%;
+    }
+
+    .section-links.active {
+        display: flex; /* Muestra los enlaces cuando están activos */
+    }
+}
+
+/*JAVASCRIPT, SELECCION DE HORAS*/
+.time-block {
+    /* Estilos generales de los bloques */
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 5px;
+    background-color: #f0f0f0;
+}
+
+.time-block.selected {
+    background-color: #b3e5fc;
+    border: 2px solid #0288d1;
+}
+
+
+/*TARJETA CON INFORMACION*/
+.info-box {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 200px; /* Ajusta el ancho según sea necesario */
+}
+
+.confirm-button {
+    background-color: #28a745;
+    color: #ffffff;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
