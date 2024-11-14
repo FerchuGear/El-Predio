@@ -1,0 +1,568 @@
+@font-face {
+    font-family: 'CMU Serif';
+    src: url('../assets/font/cmunbx.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@import url('https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i|Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i&subset=cyrillic,cyrillic-ext,devanagari,greek,greek-ext,latin-ext,vietnamese');
+
+body {
+    background-color: #3C8A34;
+    margin: 0;
+    font-family: "CMU Serif", sans-serif;
+    /* Eliminar margen del body para que el slider esté completamente alineado */
+}
+
+/* Slider Principal */
+
+.slider {
+    margin-top: -2px;
+    overflow: hidden;
+    width: 100%;
+    /* Ajusta el ancho del carrusel al 100% de la ventana */
+    height: 100.5vh;
+    /* Ajusta la altura del carrusel al 80% de la ventana, puedes cambiar este valor */
+    position: relative;
+}
+
+.slider--inner {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    /* Suaviza la transición entre imágenes */
+    width: 100%;
+    height: 100%;
+}
+
+.slider--inner img {
+    width: 100%;
+    /* Ajusta las imágenes al 100% del ancho de la ventana */
+    height: 100%;
+    /* Ajusta las imágenes al 100% de la altura del slider */
+    object-fit: cover;
+    /* Asegura que las imágenes cubran el contenedor sin deformarse */
+    flex-shrink: 0;
+    /* Evita que las imágenes se reduzcan */
+}
+
+.slider-content H1 {
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    font-size: 350%;
+}
+
+.slider-content H4 {
+    color: white;
+    font-size: 150%;
+}
+
+.slider-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    text-align: center;
+    z-index: 1;
+    text-shadow: 0 -3px 0 #333,
+        0 6px 8px rgba(0, 0, 0, .4),
+        0 9px 10px rgba(0, 0, 0, .15),
+        0 30px 10px rgba(0, 0, 0, .18),
+        0 15px 10px rgba(0, 0, 0, .21);
+}
+
+
+/* Introduccion */
+
+
+.intro-main-image {
+    position: relative;
+    z-index: -1;
+    height: 100%;
+    width: 100%;
+}
+
+.icono-cancha-container {
+    display: flex;
+    align-items: center;
+    /* Centra verticalmente */
+    gap: 10px;
+    /* Espacio entre la imagen y el texto */
+}
+
+.icono-cancha {
+    height: 100px;
+    /* Ajusta el tamaño de la imagen según tus necesidades */
+}
+
+.icono-cancha-container span {
+    font-size: 1.2rem;
+    /* Ajusta el tamaño del texto */
+    color: white;
+    /* Color del texto */
+}
+
+
+.intro-content {
+    position: absolute;
+    top: 150%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* Esto centra el contenedor */
+    color: #fff;
+    text-align: center;
+    /* Centra el texto dentro del contenedor */
+    z-index: 1;
+    text-shadow: 0 -3px 0 #333,
+        0 6px 8px rgba(0, 0, 0, .4),
+        0 9px 10px rgba(0, 0, 0, .15),
+        0 30px 10px rgba(0, 0, 0, .18),
+        0 15px 10px rgba(0, 0, 0, .21);
+}
+
+.intro-content h1 {
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    /* Color del texto */
+    position: relative;
+    display: inline-block;
+    /* Asegura que el texto se comporte como un bloque en línea */
+    font-size: 350%;
+}
+
+.intro-content h1::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 3px;
+    /* Grosor del subrayado */
+    background-color: #4CAF50;
+    /* Color del subrayado */
+    transition: width 0.5s ease;
+    /* Animación del subrayado */
+}
+
+/* Animación de subrayado cuando el h1 es hover */
+.intro-content h1:hover::after {
+    width: 100%;
+    /* Hace que el subrayado se expanda */
+}
+
+.intro-content h4 {
+    color: white;
+    /* Color del texto */
+    position: relative;
+    display: inline-block;
+    /* Asegura que el texto se comporte como un bloque en línea */
+    font-size: 150%;
+}
+
+.intro-content span {
+    color: white;
+    /* Color del texto */
+    position: relative;
+    display: inline-block;
+    /* Asegura que el texto se comporte como un bloque en línea */
+    font-size: 150%;
+    font-weight: bold;
+
+}
+
+
+
+/* About Us */
+
+.about-section {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 40px 20px;
+    background-color: #f0f0f0;
+    text-shadow: 0 -3px 0 #333,
+        0 6px 8px rgba(0, 0, 0, .4),
+        0 9px 10px rgba(0, 0, 0, .15),
+        0 30px 10px rgba(0, 0, 0, .18),
+        0 15px 10px rgba(0, 0, 0, .21);
+}
+
+.about-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    padding: 40px;
+    color: #fff;
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.about-item.left {
+    flex-direction: row;
+}
+
+.about-item.right {
+    flex-direction: row-reverse;
+}
+
+.about-text {
+    flex: 1;
+    padding: 20px;
+    background: transparent;
+    border-radius: 10px;
+    z-index: 1;
+}
+
+.about-image {
+    width: 200px;
+    height: auto;
+    border-radius: 10px;
+    margin: 0 20px;
+    z-index: 1;
+}
+
+.about-us {
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+}
+
+.display {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+}
+
+.about-text {
+    flex: 1;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Oscurecer un poco el fondo del texto */
+}
+
+.display img {
+    width: 300px;
+    height: 200px;
+    margin: 0 20px;
+    object-fit: cover;
+    border: 10px solid rgba(0, 0, 0, 0.5);
+    /* Marco negro alrededor de la imagen */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Sombra suave de color negro */
+}
+
+/* Contenedor principal de las imágenes */
+.three-images-section {
+
+    display: flex;
+    justify-content: space-between;
+    /* Espacia las imágenes equitativamente */
+    margin-top: 5%;
+    /* Margin superior */
+    margin-bottom: 5%;
+    /* Margin inferior */
+    padding: 0 5%;
+    /* Espacio en los laterales */
+}
+
+/* Estilos para cada item de imagen */
+.image-item {
+
+    position: relative;
+    width: 30%;
+    /* Cada imagen ocupa el 30% del ancho del contenedor */
+    text-align: center;
+    /* Centra el texto encima de la imagen */
+    overflow: hidden;
+    /* Asegura que la imagen no se desborde */
+}
+
+.image-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    /* Bordes redondeados para las imágenes */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    /* Sombra alrededor de las imágenes */
+    transition: opacity 0.3s ease;
+    /* Transición suave para el cambio de opacidad */
+}
+
+.image-item img:hover {
+    opacity: 0.5;
+    /* Reduce la opacidad al pasar el cursor */
+}
+
+/* Estilo para el texto sobre la imagen */
+.image-text {
+    position: absolute;
+    top: 50%;
+    /* Centra verticalmente */
+    left: 50%;
+    /* Centra horizontalmente */
+    transform: translate(-50%, -50%);
+    /* Asegura que el texto esté centrado */
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+    /* Sombra para mayor legibilidad */
+    z-index: 1;
+    /* Asegura que el texto esté encima de la imagen */
+}
+
+/* Contenedor de las imágenes con márgenes y alineación */
+.image-container {
+    display: flex;
+    justify-content: space-between;
+    /* Alinea las imágenes en fila */
+    margin-top: 5%;
+    /* Espaciado superior */
+    margin-bottom: 5%;
+    /* Espaciado inferior */
+}
+
+/* Estilo para cada item de la imagen */
+.image-item {
+    position: relative;
+    width: 30%;
+    /* Asegura que cada imagen ocupe el 30% */
+    text-align: center;
+    /* Centra el texto en cada imagen */
+    overflow: hidden;
+    /* Asegura que las imágenes no se desborden */
+}
+
+.image-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    /* Sombra */
+    transition: opacity 0.3s ease;
+    /* Transición de opacidad */
+}
+
+.image-item:hover img {
+    opacity: 0.5;
+    /* Reduce la opacidad de la imagen al pasar el cursor */
+}
+
+
+/* Seccion de Mapa */
+
+/* Ajusta el estilo del contenedor del mapa */
+.map-container {
+    position: relative;
+    width: 100%;
+}
+
+/* Div contenedor de OpenStreetMap */
+#mapa-leaflet {
+    height: 800px;
+    width: 100%;
+}
+
+/* Texto de ubicación en la parte superior */
+.location-text {
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(34, 139, 34, 0.8);
+    /* Verde con transparencia */
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight: bold;
+    z-index: 10;
+    /* Asegura que esté encima del mapa */
+}
+
+
+/* Contenedor de información en la parte inferior */
+.info-container {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    display: flex;
+    justify-content: space-around;
+    background-color: rgba(213, 212, 193, 0.8);
+    /* Fondo blanco con transparencia */
+    padding: 20px;
+    border-radius: 10px;
+    z-index: 10;
+    /* Asegura que esté encima del mapa */
+}
+
+/* Estilos de cada elemento de información */
+.info-item {
+    text-align: center;
+    max-width: 150px;
+    color: #E89220;
+}
+
+.info-item h3 {
+    text-align: center;
+    max-width: 150px;
+    color: black;
+}
+
+/* Iconos dentro de los elementos de información */
+.info-icon {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 10px;
+}
+
+/* Contenedor del mapa */
+#mapa-leaflet {
+    height: 800px;
+    width: 100%;
+    z-index: -1;
+    /* Envía el mapa al fondo */
+    position: relative;
+    /* Asegura que el z-index funcione correctamente */
+}
+
+
+/* Cosas Random */
+
+.custom-stats-container {
+    display: flex;
+    justify-content: space-around;
+    width: 80%;
+    max-width: 1000px;
+    padding: 20px;
+    background-color: #f8f3e3;
+    /* Fondo blanco humo */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin: auto;
+}
+
+.custom-stats-container .stat-item {
+    text-align: center;
+}
+
+.custom-stats-container .circle {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 5px solid;
+    margin: 0 auto 10px auto;
+}
+
+.custom-stats-container .circle img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.custom-stats-container .number {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 0;
+}
+
+.custom-stats-container .label {
+    font-size: 14px;
+    color: #555;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+
+/* Botones */
+
+
+button {
+    position: relative;
+    border: 0;
+    margin: 0;
+    padding: 0;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+    color: rgba(0, 0, 0, 0);
+    background: transparent;
+    border-radius: .25rem;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -webkit-touch-callout: none;
+
+}
+
+button,
+button:after,
+button:before {
+    padding: .6875rem 2rem;
+    -webkit-transition: -webkit-transform 0.75s, background-color .125s;
+    -moz-transition: -moz-transform 0.75s, background-color .125s;
+    -ms-transition: -ms-transform 0.75s, background-color .125s;
+    transition: transform 0.75s, background-color .125s;
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    -ms-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+}
+
+button:after,
+button:before {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border-radius: .25rem;
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -ms-backface-visibility: hidden;
+    backface-visibility: hidden;
+
+}
+
+button:before {
+    z-index: 2;
+    color: #fff;
+    background-color: #3C8A34;
+    content: attr(data-label);
+}
+
+button:after {
+    z-index: 1;
+    background-color: #999;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-image: url(data:image/gif;base64,R0lGODlhEAAQAPIAAJmZmf///7CwsOPj4////9fX18rKysPDwyH+GkNyZWF0ZWQgd2l0aCBhamF4bG9hZC5pbmZvACH5BAAKAAAAIf8LTkVUU0NBUEUyLjADAQAAACwAAAAAEAAQAAADMwi63P4wyklrE2MIOggZnAdOmGYJRbExwroUmcG2LmDEwnHQLVsYOd2mBzkYDAdKa+dIAAAh+QQACgABACwAAAAAEAAQAAADNAi63P5OjCEgG4QMu7DmikRxQlFUYDEZIGBMRVsaqHwctXXf7WEYB4Ag1xjihkMZsiUkKhIAIfkEAAoAAgAsAAAAABAAEAAAAzYIujIjK8pByJDMlFYvBoVjHA70GU7xSUJhmKtwHPAKzLO9HMaoKwJZ7Rf8AYPDDzKpZBqfvwQAIfkEAAoAAwAsAAAAABAAEAAAAzMIumIlK8oyhpHsnFZfhYumCYUhDAQxRIdhHBGqRoKw0R8DYlJd8z0fMDgsGo/IpHI5TAAAIfkEAAoABAAsAAAAABAAEAAAAzIIunInK0rnZBTwGPNMgQwmdsNgXGJUlIWEuR5oWUIpz8pAEAMe6TwfwyYsGo/IpFKSAAAh+QQACgAFACwAAAAAEAAQAAADMwi6IMKQORfjdOe82p4wGccc4CEuQradylesojEMBgsUc2G7sDX3lQGBMLAJibufbSlKAAAh+QQACgAGACwAAAAAEAAQAAADMgi63P7wCRHZnFVdmgHu2nFwlWCI3WGc3TSWhUFGxTAUkGCbtgENBMJAEJsxgMLWzpEAACH5BAAKAAcALAAAAAAQABAAAAMyCLrc/jDKSatlQtScKdceCAjDII7HcQ4EMTCpyrCuUBjCYRgHVtqlAiB1YhiCnlsRkAAAOwAAAAAAAAAAAA==);
+    -webkit-transform: rotateX(180deg);
+    -moz-transform: rotateX(180deg);
+    -ms-transform: rotateX(180deg);
+    transform: rotateX(180deg);
+    content: '';
+}
+
+button:active:before {
+    background-color: #3571c8;
+}
+
+button.loading {
+    -webkit-transform: rotateX(180deg);
+    -moz-transform: rotateX(180deg);
+    -ms-transform: rotateX(180deg);
+    transform: rotateX(180deg);
+}

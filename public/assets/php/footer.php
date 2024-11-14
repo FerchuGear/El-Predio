@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -74,3 +75,77 @@
   </div>
 </body>
 </html>
+=======
+<style>
+  body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* La altura mínima será la altura total de la ventana */
+    margin: 0;
+}
+
+main {
+    flex: 1; /* El contenido principal ocupa todo el espacio disponible */
+}
+
+/* Footer personalizado */
+.custom-footer {
+    background-color: #d2a875; /* Color de fondo similar al de la imagen */
+    padding: 20px 0;
+    border-top: 5px solid #d9534f; /* Línea superior roja */
+    position: relative;
+    width: 100%;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-item {
+    text-align: center;
+    color: #333;
+    font-size: 1.2em;
+}
+
+.footer-logo {
+    max-width: 80px;
+}
+
+.footer-button {
+    background-color: #2e7d32; /* Color verde del botón */
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.footer-button:hover {
+    background-color: #1b5e20;
+}
+
+
+</style>
+
+<footer class="custom-footer">
+    <div class="footer-content">
+        <div class="footer-item">
+            <img src="../../../../../public/assets/img/isologo.png" alt="Logo El Predio" class="footer-logo">
+        </div>
+        <div class="footer-item">
+            <p>¡Es tu momento!</p>
+            <button class="footer-button">Reserva Online</button>
+        </div>
+        <div class="footer-item">
+            <p>¡Podés reservar tu cancha ahora!</p>
+            <button class="footer-button">Chequeá Disponibilidad</button>
+        </div>
+    </div>
+</footer>
+>>>>>>> c6596b4 (Todo (o casi) lo de frontend)

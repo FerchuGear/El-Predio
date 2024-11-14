@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 require('dotenv').config();
 
@@ -8,6 +9,13 @@ const SUPABASE_ANON_KEY = process.env.SUPABASE_ANON_KEY;
  * Registra un nuevo usuario en Supabase.
  * @param {string} email - Correo electrónico del usuario.
  * @param {string} password - Contraseña del usuario.
+=======
+import { SUPABASE_URL, SUPABASE_ANON_KEY } from './config.js';
+
+/**
+ * Registra un nuevo usuario en Supabase.
+ * @param {Object} userData - Datos del usuario.
+>>>>>>> c6596b4 (Todo (o casi) lo de frontend)
  */
 async function registerUser(userData) {
     try {
@@ -23,10 +31,16 @@ async function registerUser(userData) {
                 email: userData.email,
                 password: userData.password,
                 data: {
+<<<<<<< HEAD
                     nombre: userData.nombre,
                     apellido: userData.apellido,
                     telefono: userData.telefono,
                     tipo_usuario: userData.tipo_usuario
+=======
+                    name: userData.nombre,          // Mapea a la columna 'name' en la tabla Users
+                    last_name: userData.apellido,    // Mapea a la columna 'last_name' en la tabla Users
+                    phone: userData.telefono,        // Mapea a la columna 'phone' en la tabla Users
+>>>>>>> c6596b4 (Todo (o casi) lo de frontend)
                 }
             })
         });
@@ -64,7 +78,10 @@ document.getElementById("registerForm").addEventListener("submit", function(even
     const password = document.getElementById("password").value;
     const passwordConfirm = document.getElementById("passwordConfirm").value;
     const telefono = document.getElementById("telefono").value;
+<<<<<<< HEAD
     const tipo_usuario = document.getElementById("tipo_usuario").value;
+=======
+>>>>>>> c6596b4 (Todo (o casi) lo de frontend)
 
     // Verificar si las contraseñas coinciden
     if (password !== passwordConfirm) {
@@ -73,7 +90,11 @@ document.getElementById("registerForm").addEventListener("submit", function(even
     }
 
     // Preparar los datos del usuario
+<<<<<<< HEAD
     const userData = { nombre, apellido, email, password, telefono, tipo_usuario };
+=======
+    const userData = { nombre, apellido, email, password, telefono};
+>>>>>>> c6596b4 (Todo (o casi) lo de frontend)
 
     // Llamar a la función registerUser con los datos del formulario
     registerUser(userData);
