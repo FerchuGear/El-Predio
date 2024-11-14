@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -140,3 +141,52 @@
 
 </body>
 </html>
+=======
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../public/assets/css/style.css">
+<link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" href="../../../public/assets/img/Isologo.png">
+	<header class="cd-header">
+		<div class="header-wrapper">
+
+			<div class="nav-but-wrap">
+				<div class="menu-icon hover-target">
+					<span class="menu-icon__line menu-icon__line-left"></span>
+					<span class="menu-icon__line"></span>
+					<span class="menu-icon__line menu-icon__line-right"></span>
+				</div>					
+			</div>					
+		</div>				
+	</header>
+
+	<div class="nav">
+		<div class="nav__content">
+			<ul class="nav__list">
+				<li class="nav__list-item active-nav"><a href="../../../../" class="hover-target">Inicio</a></li>
+                <li class="nav__list-item"><a href="../../public/screens/reservas.php" class="hover-target">Reservas</a></li>
+				<li class="nav__list-item"><a href="../../public/screens/contacto.php" class="hover-target">Contacto</a></li>
+				<li class="nav__list-item"><a href="../../../../#about-us" class="hover-target">Nosotros</a></li>
+				<li class="nav__list-item"><a href="../../public/screens/politicas.php" class="hover-target">Politicas</a></li>
+				<li class="nav__list-item"><a href="../../public/screens/instalacion.php" class="hover-target">Instalación</a></li>
+				<li class="nav__list-item"><a href="../../public/screens/login.php" class="hover-target">Iniciá Sesion</a></li>
+			</ul>
+		</div>
+	</div>		
+
+	<div class="section full-height over-hide">	
+		<div class="switch-wrap">
+		</div>
+	</div>	
+	
+	<div class='cursor' id="cursor"></div>
+	<div class='cursor2' id="cursor2"></div>
+	<div class='cursor3' id="cursor3"></div>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="../../public/assets/js/script.js"></script>
+
+
+<a href="https://front.codes/" class="link-to-portfolio hover-target" target=”_blank”></a>
+>>>>>>> c6596b4 (Todo (o casi) lo de frontend)

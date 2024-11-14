@@ -3,7 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<<<<<<< HEAD
     <link rel="icon" type="image/png" href="../assets/img/Isologo.png">
+=======
+    <link rel="icon" type="image/png" href="../public/assets/img/Isologo.png">
+>>>>>>> c6596b4 (Todo (o casi) lo de frontend)
 
     <style>
         /* Estilos básicos para el body */
